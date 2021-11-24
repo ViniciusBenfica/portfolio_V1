@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    overflow: auto;
+    background-color: rgb(43, 43, 53);
+    overflow-x: hidden;
+ }
+
+ .header{
+    position: fixed;
+    width: 100vw; height: 50px;
+    background-color: #202020;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .header > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%; height: 100%;
+    /* background-color: red; */
+ }
+
+ .img-start{
+     display: flex;
+     /* background-attachment: fixed;
+     background-image: url(./images/img_fundo.jfif);
+     background-size: cover; */
+     width: 100vw; height: 100vh;
+ }
+
+ .start{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.185);
+    color: #fff;
+    font-size: 20px;
+    margin-top: 150px;
+ }
+
+.return-last-place{
+    /* position: absolute;
+    bottom: 70px; right: 50%; */
+    width: 120px; height: 30px;
+    font-size: 20px;
+    transform: translateX(50%);
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: inset 0px 0px 0px 5px #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(5, 5, 5, 0.158));
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.return-last-place:hover {
+    transition-delay: 0.3s;
+    color: black;
+}
+
+/* .return-last-place:hover .return-background{
+    transition-delay: 0.3s;
+    box-shadow: 0px 0px 20px 5px #fff;
+} */
+
+/* .return-background{
+    position: absolute;
+    background-color: #0E2A2D;
+    width:205px; height:50px;
+    bottom: 70px; right: 50%;
+    transform: translateX(50%);
+    border-radius: 30px;
+    z-index: -1;
+    transition: 0.5s;
+} */
+
+.return-last-place::before{
+    content: '';
+    top: 0; left: 0;
+    position: absolute;
+    width:100%; height:0%;
+    background-color: #fff;
+    transition:  0.5s;
+    z-index: -1;
+}
+
+.return-last-place:hover::before{
+    height:100%;
+}
+
+.skills{
+    width: 70%; height: 100vh;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+ .test{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+.amigo{
+    margin: auto;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.conteudo-card{
+    background-color: green;
+    width: 100%; height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ .card{
+     width: 300px; height: 400px;
+     background-color: red;
+     /* box-shadow: 0px 0px 10px 10px black; */
+ }
+
+ .card span{
+     transition: 0.5;
+     /* opacity: 0; */
+ }
+
+/*  .card:hover span{
+     opacity: 1;
+ } */
+
+ .card span:nth-child(1){
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 8px;
+     background: linear-gradient(to right, transparent, blue);
+     animation: animate1 2s linear infinite;
+ }
+
+ @keyframes animate1 {
+     0%{transform: translateX(-100%);}
+     100%{transform: translateX(100%);}
+ }
+
+ .card span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, blue);
+    animation: animate2 2s linear infinite 1s;
+    opacity: 0;
+}
+
+@keyframes animate2 {
+    0%{transform: translateY(-100%); opacity: 1;}
+    100%{transform: translateY(100%);}
+}
+
+.card span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to left, transparent, blue);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+.card span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, blue);
+    animation: animate4 2s linear infinite 1s;
+    opacity: 0;
+}
+
+@keyframes animate4 {
+    0%{transform: translateY(100%); opacity: 1;}
+    100%{transform: translateY(-100%);}
+}
+
+.habilidades{
+    height: 100vh;
+}
