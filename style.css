@@ -1,38 +1,28 @@
 body{
     margin: 0;
     padding: 0;
-    /* font-family: 'Outfit', sans-serif; */
     font-family: 'Montserrat', sans-serif;
-    user-select: none;
+    /* user-select: none; */
     overflow: auto;
     background-color: #0e0f0f;
-    background-image: url(/images/foto4.png);
+    background-image: url(/viniciusbenficaruy/background.png);
+    background-image: url(/background.png);
+
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     overflow-x: hidden;
-    color: #fff !important;
+    color: #fff;
  }
+
+a{
+    color: rgb(185, 185, 185);;
+}
 
  ion-icon {
     color: #fff;
     font-size: 40px;
     margin: 0 5px;
-    /* transition: 1s; */
 }
-
-/* ion-icon:hover{
-      box-shadow: 0 0 1em red;
-} */
-
- .header{
-    position: fixed;
-    width: 90vw; height: 150px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 50%;
-    transform: translateX(-50%);
- }
 
  section{
      display: flex;
@@ -46,18 +36,17 @@ body{
     margin: auto;
     margin-top: 50vh;
     transform: translateY(-50%);
-
  }
 
  .first-page p{
     color: rgb(226, 226, 226);
-     font-size: 19px;
+    font-size: 19px;
  }
 
  .first-page h1{
     color: rgb(226, 226, 226);
-     font-size: 60px;
-     margin: 0;
+    font-size: 60px;
+    margin: 0;
  }
 
  .first-page h5{
@@ -66,37 +55,7 @@ body{
     margin-bottom: 0;
 }
 
-/* .triangle{
-    position: absolute;
-    right: 50%;
-    transform: translateX(-50%);
-    width: 0; height: 0;
-    margin-top: 90vh;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 50px solid #242424;
-    animation: animationOpacit 2s infinite;
-}
-
-.inside-triangle{
-    position: absolute;
-    right: 51%;
-    transform: translateX(-50%);
-    width: 0; height: 0;
-    margin-top: 90.5vh;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 30px solid #EBEFF7;
-    animation: animationOpacit 2s infinite;
-} */
-
-@keyframes animationOpacit {
-    0%{transform: translateY(0);}
-    50%{transform: translateY(50px);}
-    100%{transform: translateY(0);}
-}
-
-.return-last-place{
+.see-more{
     font-weight: 500;
     position: absolute;
     bottom: 60px; right: 50%;
@@ -104,6 +63,7 @@ body{
     text-align: center;
     width: 150px; height: 30px;
     font-size: 25px;
+    cursor: pointer;
     color: #fff;
     border-radius: 30px;
     padding: 10px;
@@ -114,28 +74,12 @@ body{
     transition: 0.5s;
 }
 
-.return-last-place:hover {
+.see-more:hover {
     transition-delay: 0.3s;
     color: black;
 }
 
-.return-last-place:hover .return-background{
-    transition-delay: 0.3s;
-    box-shadow: 0px 0px 20px 5px #fff;
-}
-
-.return-background{
-    position: absolute;
-    background-color: #0E2A2D;
-    width:205px; height:50px;
-    bottom: 70px; right: 50%;
-    transform: translateX(50%);
-    border-radius: 30px;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.return-last-place::before{
+.see-more::before{
     content: '';
     top: 0; left: 0;
     position: absolute;
@@ -145,56 +89,44 @@ body{
     z-index: -1;
 }
 
-.return-last-place:hover::before{
+.see-more:hover::before{
     height:100%;
 }
 
-.habilidades{
-    /* background-color: green; */
-    width: 100%; height: 200px;
+.skills{
+    width: 100%; height: auto;
     margin: auto;
-    /* border-radius: 20px; */
-    /* box-shadow: 0 0 1em black; */
 }
 
-.habilidades > div{
-    /* background-color: red; */
+.skills > div{
     width: 100%;
-    margin: 15px 0;
-    /* background-color: blue; */
+    margin: 25px 0;
 }
 
-.barra-fundo{
+.bar-out{
     width: 100%; height: 15px;
     background-color: rgb(94, 94, 94);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.barra-dentro{
-    height: 15px;
+.inside-bar{
+    height: 15px; width: 0;
     background-color: #1f6299;
     border-radius: 10px;
-    /* display: none; TODO */
-}
-
-.name{
-    font-size: 12px;
-    text-transform: uppercase;
 }
 
 .second-page{
-    width: 50%; height: 100%;
+    width: 100%; height: 100%;
     margin: auto;
 }
 
 .about{
     font-weight: 300;
-    width: 100%; height: 500px;
+    width: 100%; height: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
-    /* background-color: blueviolet; */
 }
 
 .about > div{
@@ -206,22 +138,109 @@ body{
 }
 
 .animation-inside-bar{
-     animation: barra-zerada 2s linear normal;
+     animation: bar-start 1s linear normal;
  }
+
+ @keyframes bar-start {
+    0%{width:0%}
+}
 
  .bottom{
      width: 100%; height: 100px;
      text-align: center;
+     position: absolute;
+     top: 200vh;
      line-height: 2;
      font-size: 15px;
      color: rgb(185, 185, 185);
-     margin-top: -30px;
      background-color: #242525;
  }
 
- @keyframes barra-zerada {
-     0%{width:0%;}
+ .description{
+    text-align: center; 
+    font-size: 15px;
+    width: 60%;
+    margin: auto;
  }
+
+ .text-skills{
+     font-size: 40px;
+     text-align: center;
+     margin: 0;
+     font-weight: bolder;
+ }
+
+ .second-page h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+
+ @media (max-width: 1600px) {
+    .about {
+        zoom: 0.7;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+    }
+
+    .text-skills{
+        text-align: center;
+    }
+
+    .first-page{
+        height: 250px;
+        zoom: 0.7;
+    }
+
+    .first-page h1{
+        color: rgb(226, 226, 226);
+         font-size: 40px;
+         margin: 0;
+     }
+
+     .see-more{
+         zoom: 0.6;
+     }
+
+     .second-page h1{
+         font-size: 30px;
+     }
+
+     .description{
+         font-size: 13px;
+     }
+
+     .bottom{
+         height: 60px;
+         font-size: 10px;
+     }
+}
+
+@media (max-width: 700px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about > div{
+        width: 50%;
+    }
+
+    .bottom{
+        display: none;
+    }
+}
+
+@media (max-height: 500px) {
+    .bottom{
+        display: none;
+    }
+}
 
  /* .test{
     height: 100vh;
