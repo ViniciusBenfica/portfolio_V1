@@ -5,8 +5,7 @@ body{
     /* user-select: none; */
     overflow: auto;
     background-color: #0e0f0f;
-    background-image: url(/vinicius/background.png);
-    /* background-image: url(./background.png); */
+    background-image: url(./background.png);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     overflow-x: hidden;
@@ -176,6 +175,11 @@ a{
  .second-page h1{
     font-size: 40px;
     text-align: center;
+}
+
+.whatsapp{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
