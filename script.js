@@ -1,4 +1,4 @@
-const skills = [
+/* const skills = [
     {name: "html", porcentagem: "84%"},
     // {name: "next", porcentagem: "10%"},
     {name: "vue", porcentagem: "50%"},
@@ -20,7 +20,7 @@ skills.map((item) => {
         </div>
     </div>
     `)
-})
+}) */
 
 $(".logo-discord").click(() => {
     window.open("https://discord.gg/CjbzggEerU");
@@ -46,8 +46,3 @@ $(window).scroll(() => {
         $(".inside-bar").addClass("animation-inside-bar")
     }
 });
-
-$(".see-more").click(() => {
-    var scroll = $("section").height()
-    window.scrollTo({top: scroll, behavior: 'smooth'})
-})
